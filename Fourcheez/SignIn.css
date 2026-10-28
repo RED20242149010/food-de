@@ -1,0 +1,307 @@
+.signin-page {
+  min-height: calc(100vh - 72px);
+
+  background: #faf9f6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 64px;
+
+  padding: 70px 8%;
+}
+
+
+.signin-left {
+  width: 520px;
+
+  background: #211e1c;
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 48px;
+}
+
+
+.signin-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 23px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+
+  background: #f7b900;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+
+.signin-left h1 {
+  font-size: 31px;
+
+  margin-bottom: 18px;
+}
+
+
+.signin-left p {
+  color: #aaa6a2;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  margin-bottom: 32px;
+}
+
+.signin-food-image {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  display: block;
+}
+
+
+.signin-right {
+  width: 455px;
+}
+
+
+.signin-right h2 {
+  font-size: 30px;
+
+  color: #211e1c;
+
+  margin-bottom: 8px;
+}
+
+.signin-subtitle {
+  color: #777;
+
+  font-size: 14px;
+
+  margin-bottom: 32px;
+}
+
+.signin-right label {
+  display: block;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #292522;
+
+  margin-bottom: 8px;
+}
+
+
+.signin-right input[type="text"],
+.signin-right input[type="password"] {
+  width: 100%;
+
+  height: 44px;
+
+  border: 1px solid #dedbd7;
+
+  border-radius: 9px;
+
+  background: white;
+
+  padding: 0 12px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  margin-bottom: 22px;
+}
+
+
+.signin-right input[type="text"]:focus,
+.signin-right input[type="password"]:focus {
+  border-color: #f7b900;
+}
+
+
+.password-label {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.password-label a {
+  color: #e9a900;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+.remember-me {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 5px 0 30px;
+}
+
+.remember-me input {
+  width: 18px;
+  height: 18px;
+
+  accent-color: #f7b900;
+
+  margin: 0;
+}
+
+.remember-me label {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+.signin-button {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #f7b900;
+
+  color: #211e1c;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-bottom: 16px;
+}
+
+.signin-button:hover {
+  background: #e9a900;
+}
+
+
+.google-button {
+  width: 100%;
+
+  height: 48px;
+
+  border: 1px solid #dedbd7;
+
+  border-radius: 12px;
+
+  background: white;
+
+  color: #292522;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.google-button:hover {
+  background: #f5f3f0;
+}
+
+.create-account {
+  text-align: center;
+
+  color: #777;
+
+  font-size: 14px;
+
+  margin-top: 32px;
+}
+
+.create-account a {
+  color: #e9a900;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  margin-left: 5px;
+}
+
+
+@media (max-width: 900px) {
+
+  .signin-page {
+    flex-direction: column;
+
+    padding: 40px 20px;
+
+    gap: 40px;
+  }
+
+  .signin-left,
+  .signin-right {
+    width: 100%;
+
+    max-width: 520px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .signin-left {
+    padding: 30px;
+  }
+
+  .signin-left h1 {
+    font-size: 25px;
+  }
+
+  .signin-food-image {
+    height: 180px;
+  }
+
+  .signin-right h2 {
+    font-size: 26px;
+  }
+
+}
