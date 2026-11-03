@@ -1,0 +1,597 @@
+.ai-page {
+  min-height: 100vh;
+  background: #fcfaf7;
+  color: #211d19;
+  font-family: inherit;
+}
+
+.ai-page * {
+  box-sizing: border-box;
+}
+
+.ai-page button,
+.ai-page input {
+  font: inherit;
+}
+
+.ai-page button {
+  cursor: pointer;
+}
+
+.ai-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 1fr);
+  gap: 44px;
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  padding: 42px 0 44px;
+  align-items: start;
+}
+
+/* Chat section */
+
+.ai-chat-column {
+  min-width: 0;
+}
+
+.ai-assistant-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 21px;
+}
+
+.ai-logo {
+  display: grid;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: #f5b90b;
+  color: #211d19;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.ai-assistant-heading h1 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ai-assistant-heading p {
+  margin: 0;
+  color: #81776f;
+  font-size: 10px;
+}
+
+.ai-online-status {
+  margin-left: auto;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #e9f7e9;
+  color: #50b86c;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* Conversation window */
+
+.ai-chat-window {
+  min-height: 272px;
+  padding: 20px;
+  border: 1px solid #eae2da;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(45 30 15 / 2%);
+}
+
+.ai-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+
+.ai-message {
+  max-width: 100%;
+  padding: 12px 13px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.ai-message p {
+  margin: 0;
+}
+
+.ai-message p + p {
+  margin-top: 8px;
+}
+
+.ai-user-message {
+  align-self: flex-end;
+  max-width: 94%;
+  background: #fff8e7;
+}
+
+.ai-chef-message {
+  align-self: stretch;
+  background: #fcfaf7;
+}
+
+.ai-chef-message p + p {
+  color: #81776e;
+}
+
+/* Quick suggestions */
+
+.ai-quick-suggestions {
+  margin-top: 23px;
+}
+
+.ai-quick-suggestions h2 {
+  margin: 0 0 12px;
+  color: #84796f;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.ai-suggestion-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ai-suggestion-list button {
+  padding: 10px 13px;
+  border: 1px solid #eae2da;
+  border-radius: 22px;
+  background: #fff;
+  color: #302820;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: left;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ai-suggestion-list button:hover {
+  border-color: #f1b400;
+  background: #fff8e7;
+}
+
+/* Message input */
+
+.ai-input-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 9px;
+  border: 1px solid #eae2da;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.ai-input-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 2px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #302820;
+  font-size: 12px;
+}
+
+.ai-input-form input::placeholder {
+  color: #8b8179;
+}
+
+.ai-input-form button {
+  flex-shrink: 0;
+  padding: 11px 17px;
+  border: none;
+  border-radius: 9px;
+  background: #f5b90b;
+  color: #211d19;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.ai-input-form button:hover {
+  background: #e7a900;
+}
+
+/* Recommendation section */
+
+.ai-recommendation-column {
+  min-width: 0;
+}
+
+.ai-recommendation-column > h2 {
+  margin: 3px 0 22px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ai-food-card {
+  overflow: hidden;
+  border: 1px solid #eae2da;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(40 25 10 / 3%);
+}
+
+.ai-food-image-wrapper {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #f0e8dc;
+}
+
+.ai-food-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ai-food-card:hover .ai-food-image {
+  transform: scale(1.025);
+}
+
+.ai-food-card-content {
+  padding: 17px;
+}
+
+.ai-food-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+
+.ai-recommendation-badge {
+  padding: 5px 7px;
+  border-radius: 3px;
+  background: #fff8e7;
+  color: #574a30;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.ai-rating {
+  color: #3d352c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ai-rating span {
+  color: #f2b400;
+  font-size: 15px;
+}
+
+.ai-food-card-content h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.ai-food-description {
+  margin: 0;
+  color: #81766d;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.ai-recommendation-reason {
+  margin-top: 12px;
+  padding: 11px;
+  border-radius: 8px;
+  background: #fff8e7;
+  color: #4b4031;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.ai-food-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 13px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee6df;
+  color: #81766d;
+  font-size: 10px;
+}
+
+.ai-food-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.ai-food-price {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.ai-food-card-bottom button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #f5b90b;
+  color: #211d19;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.ai-food-card-bottom button:hover {
+  background: #e7a900;
+}
+
+.ai-added-message {
+  margin: 12px 0 0;
+  color: #23864a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.ai-added-message a {
+  color: #16783a;
+  font-weight: 800;
+}
+
+/* Footer */
+
+.ai-footer {
+  padding: 42px 5% 22px;
+  background: #211d19;
+  color: #fff;
+}
+
+.ai-footer-top {
+  display: grid;
+  grid-template-columns: 1.8fr 0.8fr 0.9fr 1fr;
+  gap: 38px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 31px;
+}
+
+.ai-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 13px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.ai-footer-logo span {
+  display: grid;
+  width: 33px;
+  height: 33px;
+  place-items: center;
+  border-radius: 7px;
+  background: #f5b90b;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ai-footer-logo strong {
+  font-size: 18px;
+}
+
+.ai-footer-brand p {
+  max-width: 285px;
+  margin: 0;
+  color: #aaa19a;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.ai-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.ai-footer-column h3 {
+  margin: 4px 0 3px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.ai-footer-column a,
+.ai-footer-column span {
+  color: #aaa19a;
+  font-size: 11px;
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.ai-footer-column a:hover {
+  color: #f5b90b;
+}
+
+.ai-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #403a34;
+}
+
+.ai-footer-bottom p {
+  margin: 0;
+  color: #a49b94;
+  font-size: 10px;
+}
+
+.ai-social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.ai-social-links span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  background: #403a34;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .ai-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    width: min(680px, 92%);
+    padding-top: 30px;
+  }
+
+  .ai-recommendation-column > h2 {
+    margin-bottom: 15px;
+  }
+
+  .ai-food-image-wrapper {
+    height: 240px;
+  }
+
+  .ai-footer-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .ai-container {
+    width: 92%;
+    padding: 25px 0 32px;
+  }
+
+  .ai-assistant-heading {
+    gap: 9px;
+  }
+
+  .ai-logo {
+    flex-basis: 39px;
+    width: 39px;
+    height: 39px;
+    font-size: 20px;
+  }
+
+  .ai-assistant-heading h1 {
+    font-size: 14px;
+  }
+
+  .ai-online-status {
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  .ai-chat-window {
+    min-height: 250px;
+    padding: 12px;
+  }
+
+  .ai-messages {
+    gap: 28px;
+  }
+
+  .ai-message {
+    padding: 11px;
+    font-size: 11px;
+  }
+
+  .ai-user-message {
+    max-width: 100%;
+  }
+
+  .ai-suggestion-list {
+    gap: 8px;
+  }
+
+  .ai-suggestion-list button {
+    font-size: 10px;
+  }
+
+  .ai-input-form {
+    gap: 7px;
+    padding: 7px;
+  }
+
+  .ai-input-form input {
+    font-size: 11px;
+  }
+
+  .ai-input-form button {
+    padding: 11px 12px;
+    font-size: 10px;
+  }
+
+  .ai-food-image-wrapper {
+    height: 200px;
+  }
+
+  .ai-food-card-content {
+    padding: 14px;
+  }
+
+  .ai-footer {
+    padding: 32px 6% 20px;
+  }
+
+  .ai-footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 27px 20px;
+  }
+
+  .ai-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .ai-footer-brand p {
+    max-width: 350px;
+  }
+
+  .ai-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 350px) {
+  .ai-footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-footer-brand {
+    grid-column: auto;
+  }
+
+  .ai-food-card-bottom button {
+    padding: 10px;
+  }
+}
