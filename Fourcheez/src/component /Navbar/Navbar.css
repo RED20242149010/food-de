@@ -1,0 +1,406 @@
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  min-height: 66px;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee5df;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: #211d1b;
+  flex-shrink: 0;
+}
+
+.logo span {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5b400;
+  color: #ffffff;
+  border-radius: 9px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo strong {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+/* =========================
+   DELIVERY LOCATION
+========================= */
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.location-icon {
+  font-size: 17px;
+}
+
+.location small {
+  display: block;
+  color: #8a817b;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.location p {
+  margin: 2px 0 0;
+  color: #211d1b;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  padding: 12px 0;
+  color: #665e59;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 550;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #211d1b;
+}
+
+.nav-links a.active {
+  color: #211d1b;
+  font-weight: 750;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f5b400;
+}
+
+/* =========================
+   ADMIN NAVIGATION BUTTON
+========================= */
+
+.nav-links .admin-nav-link {
+  padding: 9px 17px;
+  border-radius: 8px;
+  background: #f5b400;
+  color: #211d1b;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links .admin-nav-link:hover {
+  background: #e5a900;
+  color: #211d1b;
+  transform: translateY(-2px);
+}
+
+.nav-links .admin-nav-link.active {
+  background: #e5a900;
+  color: #211d1b;
+}
+
+/* Remove the normal underline from Admin button */
+
+.nav-links .admin-nav-link::after {
+  display: none;
+}
+
+/* =========================
+   NAVBAR RIGHT
+========================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+  width: 230px;
+  height: 40px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #eee3dc;
+  border-radius: 25px;
+  background: #fcfaf8;
+}
+
+.search-icon {
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #211d1b;
+  font-size: 11px;
+}
+
+.search-box input::placeholder {
+  color: #8a817b;
+}
+
+.search-clear {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: #766b64;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* =========================
+   VOICE SEARCH BUTTON
+========================= */
+
+.voice-search-nav-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.voice-search-nav-btn:hover {
+  background: #fff2d5;
+  transform: scale(1.08);
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart {
+  min-height: 38px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 25px;
+  background: #fff7e6;
+  color: #211d1b;
+  text-decoration: none;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.cart strong {
+  font-weight: 700;
+}
+
+.cart-count {
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f5b400;
+  color: #211d1b;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================
+   USER ACCOUNT
+========================= */
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #211d1b;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 650;
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #f5b400;
+  border-radius: 50%;
+  background: #f3eee8;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1050px) {
+  .navbar {
+    padding: 10px 3%;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .search-box {
+    width: 190px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 180px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 10px 4%;
+    gap: 10px;
+  }
+
+  .logo span {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .logo strong {
+    font-size: 18px;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .search-box {
+    width: 145px;
+    height: 36px;
+    padding: 0 7px;
+  }
+
+  .search-box input {
+    font-size: 10px;
+  }
+
+  .cart {
+    min-height: 34px;
+    padding: 0 9px;
+    gap: 5px;
+  }
+
+  .cart strong {
+    display: none;
+  }
+
+  .user span {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-links .admin-nav-link {
+    padding: 8px 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .search-box {
+    width: 120px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
