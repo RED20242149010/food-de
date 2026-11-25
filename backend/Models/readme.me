@@ -1,0 +1,92 @@
+# FourCheez – Backend Models
+
+This folder contains the Mongoose data models used in the FourCheez food ordering and delivery application.
+
+Each model defines the structure of a MongoDB document and specifies how application data is stored, validated, and managed.
+
+## 📁 Folder Structure
+
+```text
+models/
+│
+├── User.js
+├── Food.js
+├── Order.js
+├── Coupon.js
+└── README.md
+```
+
+## 🗄️ Database Models
+
+### 1. User.js
+
+Defines the user data structure for customer and administrator accounts.
+
+**Main responsibilities:**
+- Store user information.
+- Manage customer account details.
+- Support authentication.
+- Distinguish between customer and administrator roles.
+
+### 2. Food.js
+
+Defines the structure of food products available in the FourCheez application.
+
+**Main responsibilities:**
+- Store food names, prices, and descriptions.
+- Organize food items by category.
+- Store food images and ingredients.
+- Manage food availability.
+- Store ratings and calorie information.
+- Identify popular and recommended food items.
+
+### 3. Order.js
+
+Defines the structure of customer orders.
+
+**Main responsibilities:**
+- Store customer order information.
+- Maintain ordered food items and quantities.
+- Store delivery address details.
+- Manage subtotal, discount, delivery fee, tax, and total.
+- Track order status and payment status.
+- Store order creation timestamps.
+
+**Order statuses include:**
+- Placed
+- Confirmed
+- Preparing
+- Out for Delivery
+- Delivered
+- Cancelled
+
+### 4. Coupon.js
+
+Defines the structure of discount coupons and promotional offers.
+
+**Main responsibilities:**
+- Store coupon codes.
+- Configure discount values.
+- Set minimum order requirements.
+- Define maximum discount limits.
+- Manage coupon expiration dates.
+- Track coupon usage.
+
+## ⚙️ Technologies Used
+
+- MongoDB – NoSQL database.
+- Mongoose – MongoDB object modeling library.
+- Node.js – Backend runtime environment.
+
+## 🎯 Purpose in FourCheez
+
+The models layer provides a consistent structure for application data and connects the backend API routes with the MongoDB database.
+
+It helps manage customers, food products, orders, and promotional offers throughout the FourCheez application.
+
+---
+
+**Project:** FourCheez  
+**Module:** Backend Models  
+**Database:** MongoDB  
+**ODM:** Mongoose
